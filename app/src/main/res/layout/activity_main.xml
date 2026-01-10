@@ -50,14 +50,12 @@
                 android:layout_marginStart="12dp"
                 android:text="Добавить"
                 android:textColor="@android:color/white"
-
                 app:iconTint="@android:color/white"
                 style="@style/Widget.Material3.Button"
                 android:backgroundTint="@color/primary" />
 
         </LinearLayout>
     </com.google.android.material.appbar.AppBarLayout>
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listProduct"
         android:layout_width="match_parent"

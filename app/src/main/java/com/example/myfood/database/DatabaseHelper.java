@@ -12,7 +12,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
-
     private final static String dbName = "product-app.db";
     private final static Integer version = 1;
     public static final String TABLE_NAME ="ProductTable";
@@ -74,7 +73,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 //product.setId(cursor.getInt(cursor.getColumnIndex("_id")));
                 product.setName(cursor.getString(cursor.getColumnIndex("name")));
                 //product.setEmail(cursor.getString(cursor.getColumnIndex("email")));
-                productList.add(product);
+                productList.add(0, product);
             } while (cursor.moveToNext());
         }
         cursor.close();
