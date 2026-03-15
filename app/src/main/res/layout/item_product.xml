@@ -4,20 +4,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginStart="8dp"
-    android:layout_marginEnd="8dp"
-    android:layout_marginTop="4dp"
-    android:layout_marginBottom="4dp"
-    app:cardCornerRadius="8dp"
-    app:cardElevation="2dp"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginBottom="6dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="3dp"
     app:cardUseCompatPadding="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:gravity="center_vertical"
         android:padding="16dp"
         android:background="?android:attr/selectableItemBackground">
+
+        <View
+            android:id="@+id/viewColorIndicator"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_color_dot" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -31,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:textColor="@android:color/black" />
+                android:textColor="@color/on_surface" />
 
             <TextView
                 android:id="@+id/textProductDate"
@@ -39,17 +47,65 @@
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
                 android:textColor="@android:color/darker_gray"
-                android:layout_marginTop="4dp" />
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
 
         </LinearLayout>
 
-        <ImageButton
-            android:id="@+id/btnDelete"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_delete"
-            android:background="?android:attr/selectableItemBackgroundBorderless"
-            android:contentDescription="Удалить"/>
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/textQuantityLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="кол."
+                android:textColor="@color/on_surface"
+                android:textSize="13sp"
+                android:layout_marginEnd="6dp" />
+
+            <TextView
+                android:id="@+id/textQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/on_surface"
+                android:textSize="14sp"
+                android:layout_marginEnd="8dp" />
+
+            <EditText
+                android:id="@+id/editWeight"
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:hint="0.5"
+                android:padding="4dp"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="кг"
+                android:textColor="@color/on_surface"
+                android:textSize="13sp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="8dp"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/btnPlus"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_add"
+                android:tint="@color/on_surface"
+                android:contentDescription="@string/action_add" />
+
+        </LinearLayout>
 
     </LinearLayout>
 

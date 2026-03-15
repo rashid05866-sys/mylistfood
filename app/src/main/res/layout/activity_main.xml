@@ -8,50 +8,53 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/Theme.Material3.Dark.Dialog.MinWidth">
+        android:layout_height="wrap_content">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/primary"
-            app:title="Список продуктов"
-            app:titleTextColor="@android:color/white"/>
+            app:title="@string/app_name"
+            app:titleTextColor="@color/on_primary" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:padding="16dp"
             android:background="@color/primary_container">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputLayout"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="Новый продукт"
-                style="@style/Widget.Material3.MaterialTimePicker.Display.TextInputEditText">
+                android:hint="@string/hint_new_product"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <AutoCompleteTextView
                     android:id="@+id/textProduct"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/cardview_shadow_start_color"
+                    android:layout_height="48dp"
+                    android:completionThreshold="1"
+                    android:textColor="@color/on_surface"
+                    android:textSize="16sp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:gravity="center_vertical"
                     android:maxLines="1" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnAdd"
+                style="@style/Widget.Material3.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:text="Добавить"
-                android:textColor="@android:color/white"
-                app:iconTint="@android:color/white"
-                style="@style/Widget.Material3.Button"
+                android:layout_marginTop="12dp"
+                android:layout_gravity="end"
+                android:text="@string/action_add"
+                android:textColor="@color/on_primary"
                 android:backgroundTint="@color/primary" />
 
         </LinearLayout>

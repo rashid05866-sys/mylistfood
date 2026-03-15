@@ -1,11 +1,19 @@
 <resources>
     <string name="app_name">MyFood</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Настройки</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+
+    <string name="settings_title">Настройки</string>
+    <string name="settings_theme_title">Тема приложения</string>
+    <string name="settings_theme_system">Системная</string>
+    <string name="settings_theme_light">Светлая</string>
+    <string name="settings_theme_dark">Тёмная</string>
+    <string name="hint_new_product">Новый продукт</string>
+    <string name="action_add">Добавить</string>
 
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
